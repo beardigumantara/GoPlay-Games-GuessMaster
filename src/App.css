@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+
+@font-face {
+  font-family: "MaisonNeue";
+  src: url("/src/assets/fonts/MaisonNeue-Book.otf");
+}
+
+@font-face {
+  font-family: "MaisonNeue";
+  font-weight: bold;
+  src: url("/src/assets/fonts/MaisonNeue-Bold.otf");
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "MaisonNeue", sans-serif;
+  background-color: black;
+ 
+}
+table {
+  border-spacing: 0;
+}
+
+.Viewport {
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: linear-gradient(180deg, #6c006f 0%, #df1995 100%);
+  color: #ffffff;
+}
+
+.App {
+  text-align: center;
+}
+
+ol {
+  list-style-position: inside;
+  padding: 0;
+  padding-left: 16px;
+}
+
+li {
+  text-align: justify;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+/* random # 1 */
+.pos-top-left img {
+  position: relative;
+  transform: scale(2) translate(116px, 120px);
+  animation: fadeIn 2s;
+}
+
+/* random # 2 */
+.pos-top-right img {
+  position: relative;
+  transform: scale(2) translate(-116px, 120px);
+  animation: fadeIn 2s;
+}
+
+/* random # 3 */
+.pos-bottom-left img {
+  position: relative;
+  transform: scale(2) translate(116px, -120px);
+  animation: fadeIn 2s;
+}
+
+/* random # 4 */
+.pos-bottom-right img {
+  position: relative;
+  transform: scale(2) translate(-116px, -120px);
+  animation: fadeIn 2s;
+}
+.pos-deffault img {
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+input {
+  margin: 5px 20px;
+  width: 250px;
+  height: 20px;
+}
+
+button {
+  color: white;
+  background-color: #df1995;
+}
+
+/* register screen */
+.card-countdown {
+  position: absolute;
+  background-color: white;
+  color: black;
+  border: 3px solid #000000;
+  width: 30%;
+  bottom: 53%;
+  left: 45px;
+}
+
+.container-title {
+  position: absolute;
+  width: 25%;
+  top: 5%;
+  left: -10px;
+}
+
+.card-session p {
+  float: left;
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.autostart {
+  margin-right: 15px;
+}
+
+.players-join h3 {
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.players-join Timer {
+  font-size: 24px;
+}
+
+.desc p {
+  /* font-family: 'Maison Neue'; */
+  position: absolute;
+  text-align: justify;
+  font-weight: 400;
+  font-size: 24px;
+  top: 25%;
+  left: 45px;
+  width: 40%;
+  margin: 0;
+}
+
+.desc p span,
+.desc-end p span {
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* match */
+.container-session p,
+.card-countdown p {
+  float: left;
+  text-align: left;
+  margin: 5px 0 5px 10px;
+  font-size: 24px;
+  line-height: 35px;
+}
+
+.table-players table {
+  margin: 0 auto;
+}
+
+tr,
+td,
+th {
+  width: 400px;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 3px solid white;
+  border-collapse: collapse;
+}
+
+.session-end {
+  margin: 0 auto;
+  background-color: white;
+  border: 3px solid #000000;
+  color: black;
+  display: flex;
+  width: 50%;
+  height: 10%;
+}
+
+.session-end p {
+  margin: 10px 0 10px 10px;
+  font-size: 24px;
+}
+
+.card img {
+  position: absolute;
+  right: 0;
+  height: 720px;
+  width: auto;
+}
+.logo {
+  margin: 0;
+}
+
+.container-winner {
+  margin: 40px auto;
+}
+
+.desc-end {
+  margin: 0 auto;
+  width: 30%;
+}
+.desc-end p {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* for screen ready, match, and result */
+.match-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 5%;
+  /* background-color: white; */
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 47%;
+  height: 100%;
+  /* background-color: #fff; */
+}
+.players-match {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: 100%;
+}
+
+.truncate {
+  width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name=”robots” content=”noindex,nofollow”>
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="A game where players can compete to guess the fastest pieces of the picture."
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>GuessMaster - GoPlay Games</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="https://goplay-chat.web.app/goplay-chat.js"></script>
+    <script>
+      // Initiate GoPlay Chat instance
+      const slug = localStorage.getItem("Slug") || "guessmaster";
+      const isProduction = localStorage.getItem("env") === "production";
+
+      // @ts-ignore
+      window.chatSocket = new GoPlayChat(slug, {
+        debug: false,
+        isDevelopment: !isProduction,
+      });
+
+      // Assign callback method on user connect
+      window.chatSocket.onConnected = (name) => {
+        console.log(
+          `Connected to "${slug}" as "${name}" in ${
+            isProduction ? "Production" : "Integration"
+          } environment.`
+        );
+        chatSocket.connectionTime = new Date().getTime()
+      };
+
+    </script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
